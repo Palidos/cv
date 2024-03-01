@@ -1,1 +1,1 @@
-CV Daniil Bederdinov Frontend Developer
+[CV Daniil Bederdinov Frontend Developer](https://palidos.github.io/cv/)
