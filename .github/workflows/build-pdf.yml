@@ -25,7 +25,7 @@ jobs:
           path: "./CV Daniil Bederdinov Frontend Developer.pdf"
 
       - name: Commit & Push changes
-        |
+        run: |
           git config --global user.name 'gh-action'
           git config --global user.email 'gh-action@noreply.com'
           git add "./CV Daniil Bederdinov Frontend Developer.pdf"
