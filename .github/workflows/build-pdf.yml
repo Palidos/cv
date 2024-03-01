@@ -1,0 +1,34 @@
+name: "Build PDF"
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/moderncv/debian-texlive-docker:main
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Build PDF
+        run: latexmk ./main.tex
+        
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: main.pdf
+          path: ./main.pdf
+          
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          BRANCH: main
+          CLEAN: true
+          SINGLE_COMMIT: true
+          FOLDER: out
+          GIT_CONFIG_NAME: cvDeployBot
+          GIT_CONFIG_EMAIL: bot@noreply.cvDeployBot.com
