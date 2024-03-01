@@ -1,0 +1,1 @@
+CV Daniil Bederdinov Frontend Developer

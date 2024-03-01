@@ -1,0 +1,223 @@
+%-------------------------
+% Resume in Latex
+% Author : Daniil Bederdinov
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{calc} % added
+\usepackage{ragged2e}
+
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    \begin{minipage}[t]{0.99\linewidth} % Adjust the width as needed
+      {#1}
+    \end{minipage}
+    \vspace{-2pt} % Adjust the space between elements as needed
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheadingLeftOneRow}[2]{% % added
+\begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
+    \item[\small #1]{\textit{\small  #2}}
+\end{description}
+}
+
+\newcommand{\resumeSubSubheadingLeftTwoRows}[4]{%
+\begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
+    \item[\small #1]{\textit{\small  #2}}
+    \item[\small #3]{\textit{\small  #4}}
+\end{description}
+}
+
+\newcommand{\projectDescription}[1]{
+    \vspace{8pt} % Adjust the space between elements as needed
+    \small {#1}
+    \vspace{-6pt} % Adjust the space between elements as needed
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \small\textbf{\Huge \scshape Daniil Bederdinov} \\ \vspace{1pt}
+    \href{mailto:daniil.bederdinov.dev@gmail.com}{\underline{daniil.bederdinov.dev@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/daniil-bederdinov}{\underline{linkedin.com/in/daniil-bederdinov}} $|$
+    \href{https://github.com/Palidos}{\underline{github.com/Palidos}} $|$
+    \href{https://t.me/bederdinov}{\underline{t.me/bederdinov}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+    \small
+        {React and TypeScript Developer with over 4 years of experience in the industry. I am proficient in keeping up with the latest web technologies and promoting a better developer experience. My experience includes cross-browser development, adaptive/responsive design, unit testing and code review also I have mentored newcomers and developed a design system. I hold an advanced English certificate (CAE) and am passionate about alpine skiing. I am now seeking a challenging position where I can utilize my skills and experience to develop innovative web solutions.}
+  
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Languages}{: JavaScript, TypeScript} \\
+      \textbf{Frameworks}{: React, Next.JS, Svelte} \\
+      \textbf{Technologies and Libraries}{: Redux, Zustand, Tan Stack Query (React query), Jest, React Testing Library, Styled-Components, MUI, AntDesign, Webpack, Vite}\\
+    }}
+  \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior Frontend Developer}{May 2021 -- Present}
+      {Sber}{Moscow, Russia}
+
+    \projectDescription
+      {HR platform that helps to manage all sorts of HR tasks (vacation, remote work, sick-leave, etc.), interact with colleagues (posts, comments, likes, social circle, etc.), monitor employees (risk of dismissal, haven't taken a vacation for a long time, team stats, etc.) and many more.}
+        
+      \resumeItemListStart
+        \resumeItem{Initiated the transition to the widget system in monorepo (that lead not only to better DX but also reduced time to production, significantly decreased the participation of our team in release processes of neighboring teams)}
+        \resumeItem{Improved IE11 performance (30\% of all users - more than 85000 users)}
+        \resumeItem{Raised code coverage in every application to 99\%}
+        \resumeItem{Improved accessibility of key components}
+        \resumeItem{Optimized legacy code to handle 50 times the load}
+        \resumeItem{Participated in development of a UI Kit}
+        \resumeItem{Conducted interviews}
+        \resumeItem{Mentored newcomers}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Frontend Developer}{Aug. 2020 -- Apr. 2021}
+      {EORA}{Remote, Russia}
+
+    \projectDescription
+      {Interactive fairy tale that can be controlled with a remote control as well as with a voice. Communication between Frontend and Backend was via WebSocket. The device that connected to the TV was equipped with low-performance hardware. Thus, it was crucial to optimize images, videos and animations on the screen.}
+
+      \resumeItemListStart
+        \resumeItem{Optimized images, audio and video files}
+        \resumeItem{Profiled code on a low-performance hardware}
+        \resumeItem{Added internalization}
+        \resumeItem{Participated in development of a UI Kit}
+      \resumeItemListEnd
+
+    \resumeSubheading
+    {Frontend Developer}{Sep. 2019 -- Jun. 2020}
+    {Artezio}{Nizhny Novgorod, Russia}
+    
+    \projectDescription
+      {Platform with google-like calendar for lesson arrangement, lesson material storage, lesson planning, personal dashboard.}
+
+    \resumeItemListStart
+      \resumeItem{Optimized performance of a google calendar-like page}
+      \resumeItem{Structured date manipulations}
+      \resumeItem{Improved client API Developer Experience by removing boilerplate}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {RUT Russian University of Transport }{Sep. 2020 -- Jun. 2023}
+      {Master of Science in Applied Informatics}{Moscow, Russia}
+    \resumeSubheading
+      {UNN University of Nizhniy Novgorod}{Sep. 2016 -- Jun. 2020}
+      {Bachelor of Science in Software Engineering}{Nizhny Novgorod, Russia}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+
+\end{document}
