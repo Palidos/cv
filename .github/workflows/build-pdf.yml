@@ -19,17 +19,18 @@ jobs:
 
       - name: Rename PDF
         run: |
-          mv main.pdf "CV Daniil Bederdinov Frontend Developer.pdf"
+          mkdir out
+          cp ./main.pdf "./out/CV Daniil Bederdinov Frontend Developer.pdf"
         
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
           name: CV Daniil Bederdinov Frontend Developer.pdf
-          path: ./CV Daniil Bederdinov Frontend Developer.pdf
+          path: "./out/CV Daniil Bederdinov Frontend Developer.pdf"
 
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          directory: ./CV Daniil Bederdinov Frontend Developer.pdf
+          directory: "./out/CV Daniil Bederdinov Frontend Developer.pdf"
 
