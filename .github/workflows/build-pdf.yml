@@ -15,24 +15,17 @@ jobs:
       - name: Build PDF
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex
+          root_file: "CV Daniil Bederdinov Frontend Developer.tex"
           post_compile: "latexmk -c"
-
-      - name: Rename PDF
-        run: |
-          rm -r ./build
-          mkdir build
-          cp ./main.pdf "./build/CV Daniil Bederdinov Frontend Developer.pdf"
         
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
           name: CV Daniil Bederdinov Frontend Developer.pdf
-          path: "./build/CV Daniil Bederdinov Frontend Developer.pdf"
+          path: "./CV Daniil Bederdinov Frontend Developer.pdf"
 
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          directory: ./build
 
