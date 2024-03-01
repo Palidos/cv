@@ -19,18 +19,19 @@ jobs:
 
       - name: Rename PDF
         run: |
-          mkdir out
-          cp ./main.pdf "./out/CV Daniil Bederdinov Frontend Developer.pdf"
+          rm -r ./build
+          mkdir build
+          cp ./main.pdf "./build/CV Daniil Bederdinov Frontend Developer.pdf"
         
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
           name: CV Daniil Bederdinov Frontend Developer.pdf
-          path: "./out/CV Daniil Bederdinov Frontend Developer.pdf"
+          path: "./build/CV Daniil Bederdinov Frontend Developer.pdf"
 
       - name: Commit & Push changes
         run: |
-          git add "./out/CV Daniil Bederdinov Frontend Developer.pdf"
+          git add "./build/CV Daniil Bederdinov Frontend Developer.pdf"
           git commit -m "update PDF file"
           git push
 
