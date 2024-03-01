@@ -16,6 +16,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
+          post_compile: "latexmk -c"
 
       - name: Rename PDF
         run: |
@@ -30,8 +31,8 @@ jobs:
           path: "./build/CV Daniil Bederdinov Frontend Developer.pdf"
 
       - name: Commit & Push changes
-        run: |
-          git add "./build/CV Daniil Bederdinov Frontend Developer.pdf"
-          git commit -m "update PDF file"
-          git push
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          directory: ./build
 
