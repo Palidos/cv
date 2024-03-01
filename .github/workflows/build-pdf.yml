@@ -15,9 +15,13 @@ jobs:
       - name: Build PDF
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: "./CV Daniil Bederdinov Frontend Developer.tex"
+          root_file: main.tex
           post_compile: "latexmk -c"
         
+      - name: Rename PDF
+        run: |
+          mv ./main.pdf "./CV Daniil Bederdinov Frontend Developer.pdf"
+
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
