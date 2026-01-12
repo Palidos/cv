@@ -23,7 +23,7 @@ jobs:
           mv ./main.pdf "./CV Daniil Bederdinov Frontend Developer.pdf"
 
       - name: Upload PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: CV Daniil Bederdinov Frontend Developer.pdf
           path: "./CV Daniil Bederdinov Frontend Developer.pdf"
